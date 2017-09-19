@@ -6,8 +6,11 @@ nav {
   box-shadow: 0px 1.5px rgba(0, 0, 0, 0.5);
 }
 
-hr {
-  width: 70%;
+p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .navbar {
@@ -31,6 +34,12 @@ hr {
 
 .btn-primary:hover {
   transition: 0.5s;
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+.btn-primary:active {
   background-color: white;
   border-color: black;
   color: black;

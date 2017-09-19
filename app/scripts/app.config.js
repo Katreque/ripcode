@@ -11,7 +11,11 @@
           templateUrl: './app/views/home.html'
         })
 
-        .otherwise({redirectTo: '/'});
+        .when('/mmc', {
+          templateUrl: './app/views/mmc.html'
+        })
+
+        //.otherwise({redirectTo: '/'});
     }])
 
     .config(['$locationProvider', function($locationProvider){

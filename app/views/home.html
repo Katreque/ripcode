@@ -5,11 +5,11 @@
     <input type="text" class="form-control" placeholder="Procure por seu código aqui!" ng-model="homeCtrl.inputPesquisa"/>
   </div>
 </div>
-<hr>
-<div class="col-sm-10 col-sm-offset-2">
-  <div class="col-md-3 cards" ng-repeat="codigo in homeCtrl.codigosArray.codigos track by codigo.id | filter: homeCtrl.inputPesquisa">
+<div class="col-sm-10 col-sm-offset-2" style="padding-left: 30px;">
+  <div class="col-md-3 cards" ng-repeat="codigo in homeCtrl.codigosArray.codigos | filter: homeCtrl.inputPesquisa track by codigo.id">
     <h1>{{codigo.nome}}</h1>
     <p>{{codigo.desc}}</p>
-    <button class="btn btn-primary">Código</button>
+    <hr>
+    <button class="btn btn-primary" ng-click="codigo.url()">Código</button>
   </div>
 </div>

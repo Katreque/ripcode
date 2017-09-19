@@ -4,16 +4,26 @@
     <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <link rel="stylesheet" href="./app/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <title>RIP Code | O lugar aonde seus códigos descansam em paz!</title>
+    <link rel="stylesheet" href="./app/styles/style.css">
+    <title>RIP Code | Onde seus códigos descansam em paz!</title>
   </head>
   <body>
+    <div ng-include=" './app/includes/navbar.html' "></div>
     <main>
       <div ng-view></div>
     </main>
-    <script type="text/javascript" src="./app/bower_components/jquery/dist/jquery.min.js"></script>
-     <script type="text/javascript" src="./app/bower_components/angular/angular.min.js"></script>
-     <script type="text/javascript" src="./app/bower_components/angular-route/angular-route.min.js"></script>
-     <script type="text/javascript" src="./app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <div ng-include=" './app/includes/footer.html' "></div>
+      <script type="text/javascript" src="./app/bower_components/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="./app/bower_components/angular/angular.min.js"></script>
+      <script type="text/javascript" src="./app/bower_components/angular-route/angular-route.min.js"></script>
+      <script type="text/javascript" src="./app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+      <script type="text/javascript" src="./app/scripts/app.js"></script>
+      <script type="text/javascript" src="./app/scripts/app.config.js"></script>
+
+      <script type="text/javascript" src="./app/scripts/controllers/homeController.js"></script>
+      <script type="text/javascript" src="./app/scripts/models/codesModel.js"></script>
   <body>
 </html>

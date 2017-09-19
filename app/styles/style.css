@@ -1,0 +1,45 @@
+body {
+  font-family: 'Philosopher', sans-serif;
+}
+
+nav {
+  box-shadow: 0px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  width: 70%;
+}
+
+.navbar {
+  border-radius: 0px;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.jumbotron-highnoon {
+  background-color: white;
+  padding-top: 0px;
+}
+
+.btn-primary {
+  transition: 0.5s;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-primary:hover {
+  transition: 0.5s;
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+.cards {
+  padding-bottom: 10px;
+  margin: 5px;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}

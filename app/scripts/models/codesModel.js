@@ -12,8 +12,8 @@
               {id: 1, nome: "MDC", desc: "MDC hardcoded que passa que nem uma beleza!", url: function(){$location.path("/mdc")}},
               {id: 2, nome: "SegTree", desc: "Se hoje é o dia das crianças, devo dizer mais ainda.", url: function(){$location.path("/segtree")}},
               {id: 3, nome: "DFS", desc: "Ontem eu disse: o dia da criança é o dia da mãe.", url: function(){$location.path("/dfs")}},
-              {id: 4, nome: "Template 2.0", desc: "Dos pais, das professoras, mas também é o dia dos animais.", url: function(){$location.path("/template20")}},
-              {id: 5, nome: "Kapparino Kode", desc: "Sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás.", url: function(){$location.path("/kapparinokode")}}
+              {id: 4, nome: "Template 2.0", desc: "Dos pais, das professoras, mas também é o dia dos animais.", url: function(){$location.path("/Template")}},
+              {id: 5, nome: "Kappa Kode", desc: "Sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás.", url: function(){$location.path("/kappa")}}
             ];
           }
         }

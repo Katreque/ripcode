@@ -12,10 +12,41 @@
         })
 
         .when('/mmc', {
+          controller: 'homeController',
+          controllerAs: 'homeCtrl',
           templateUrl: './app/views/mmc.html'
         })
 
-        //.otherwise({redirectTo: '/'});
+        .when('/mdc', {
+          controller: 'homeController',
+          controllerAs: 'homeCtrl',
+          templateUrl: './app/views/mdc.html'
+        })
+
+        .when('/segtree', {
+          controller: 'homeController',
+          controllerAs: 'homeCtrl',
+          templateUrl: './app/views/segtree.html'
+        })
+
+        .when('/dfs', {
+          controller: 'homeController',
+          controllerAs: 'homeCtrl',
+          templateUrl: './app/views/dfs.html'
+        })
+
+        .when('/template', {
+          controller: 'homeController',
+          controllerAs: 'homeCtrl',
+          templateUrl: './app/views/template.html'
+        })
+
+        .when('/kappa', {
+          controller: 'homeController',
+          controllerAs: 'homeCtrl',
+          templateUrl: './app/views/kappa.html'
+        })
+        .otherwise({redirectTo: '/'});
     }])
 
     .config(['$locationProvider', function($locationProvider){

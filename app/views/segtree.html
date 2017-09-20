@@ -1,0 +1,69 @@
+<div class="col-md-8 col-md-offset-2">
+	<h1 class="text-center">SegTree</h1>
+	<pre><code>
+		// com uma lazyzinha pra poder ficar suave
+
+		#define NMAX 100100
+		#define ll long long
+		#define mid (l + r) / 2
+
+		ll tree[4 * NMAX], lazy[4 * NMAX];
+
+		void build(int id, int l, int r){
+			tree[id] = lazy[id] = 0;
+
+			if (l == r)
+				return;
+
+			build(id * 2, l, mid);
+			build(id * 2 + 1, mid + 1, r);
+		}
+
+		void propagation(int id, int l, int r){
+			if (lazy[id]){
+				tree[id] += (ll)(r - l + 1)*lazy[id];
+
+				if (l != r){
+					lazy[id * 2] += lazy[id];
+					lazy[id * 2 + 1] += lazy[id];
+				}
+
+				lazy[id] = 0;
+			}
+		}
+
+		void update(int id, int l, int r, int i, int j, int v){
+			propagation(id, l, r);
+
+			if (r < i or l > j)
+				return;
+
+			if (l >= i && r <= j){
+				lazy[id] = v;
+				propagation(id, l, r);
+				return;
+			}
+
+			update(id * 2, l, mid, i, j, v);
+			update(id * 2 + 1, mid + 1, r, i, j, v);
+			tree[id] = tree[id * 2] + tree[id * 2 + 1];
+		}
+
+		ll get(int id, int l, int r, int i, int j){
+			propagation(id, l, r);
+
+			if (r < i or l > j)
+				return 0;
+
+			if (l >= i && r <= j)
+				return tree[id];
+
+			return get(id * 2, l, mid, i, j) + get(id * 2 + 1, mid + 1, r, i, j);
+		}
+	</code></pre>
+	<div class="col-md-10" style="padding-bottom: 30px;">
+		<input type="email" class="form-control" placeholder="Digite seu email para receber o código." />
+	</div>
+		<button class="btn btn-primary" ng-click="homeCtrl.enviar()">Enviar</button>
+		<button class="btn btn-secondary" ng-click="homeCtrl.voltar()">Voltar</button>
+</div>
